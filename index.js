@@ -1,5 +1,7 @@
 import puppeteer from "puppeteer";
-import { collectData } from "./collectData.js";
+import { searchBolts } from "./searchBolts.js";
+
+export let data = [];
 
 (async () => {
   const browser = await puppeteer.launch({
@@ -11,9 +13,9 @@ import { collectData } from "./collectData.js";
     },
   });
   const page = await browser.newPage();
-  await page.goto("https://www.mtk-fortuna.ru/bolty");
+  await page.goto("https://www.mtk-fortuna.ru/catalog");
 
-  await collectData(page);
+  await searchBolts(page);
 
   // await browser.close();
 })();
