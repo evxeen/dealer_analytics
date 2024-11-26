@@ -6,6 +6,7 @@ import { searchScrews } from "./helpers/searchScrews.js";
 import { searchNewScrews } from "./helpers/searchNewScrews.js";
 import { searchSelfTapping } from "./helpers/searchSelfTapping.js";
 import { searchStuds } from "./helpers/searchStuds.js";
+import { writeData } from "./helpers/writeData.js";
 
 export let data = [];
 
@@ -28,6 +29,8 @@ export let data = [];
   await searchNewScrews(page);
   await searchSelfTapping(page);
   await searchStuds(page);
+
+  writeData();
 
   await browser.close();
 })();

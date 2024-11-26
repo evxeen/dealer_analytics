@@ -1,7 +1,9 @@
 {
   "type": "module",
   "dependencies": {
-    "puppeteer": "^23.9.0"
+    "exceljs": "^4.4.0",
+    "puppeteer": "^23.9.0",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "prettier": "3.3.3"
